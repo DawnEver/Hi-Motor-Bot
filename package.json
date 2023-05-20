@@ -3,9 +3,9 @@
   "version": "0.0.1",
   "license": "MIT",
   "scripts": {
-    "dev": "next -p 9876",
-    "build": "next build -p 9876",
-    "start": "next start -p 9876"
+    "dev": "next -p 5183",
+    "build": "next build -p 5183",
+    "start": "next start -p 5183"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.21.0",
