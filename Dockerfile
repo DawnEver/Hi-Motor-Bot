@@ -1,5 +1,9 @@
 FROM node:18-alpine
 
-RUN npm ci
+COPY . /app
+
+WORKDIR /app
+
+RUN npm install --registry=https://registry.npm.taobao.org
 
 CMD ["npm", "run", "dev"]
