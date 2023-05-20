@@ -116,4 +116,4 @@ cp .env.local.example .env.local
 npm run dev
 ```
 
-- Open http://localhost:3000 in your browser to view the app.
+- Open http://localhost:5183 in your browser to view the app.
