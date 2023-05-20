@@ -1,8 +1,8 @@
 version: "3"
 
 services:
-  Hi-Motor-Bot:
-    container_name: Hi-Motor-Bot
+  hi-motor-bot:
+    container_name: hi-motor-bot
     restart: always
     ports:
       - 5183:5183
