@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  Hi-Motor-Bot:
+    container_name: Hi-Motor-Bot
+    restart: always
+    ports:
+      - 5183:5183
+    build:
+      context: "."
+      dockerfile: Dockerfile
