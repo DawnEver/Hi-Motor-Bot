@@ -6,7 +6,7 @@ import { v4 as uuidv4 } from 'uuid';
 import LoadingDots from "@/components/LoadingDots";
 import ResizablePanel from "@/components/ResizablePanel";
 import MetaTags from "@/components/MetaTags";
-import { ReactNode } from "react";
+import { ReactNode} from "react";
 import { PageMeta } from "../types";
 import MarkdownRenderer from "@/components/MarkdownRenderer";
 
@@ -80,7 +80,6 @@ const AskPage: NextPage<Props> = ({ children, meta: pageMeta }: Props) => {
       <div className="flex flex-col items-center justify-center min-h-screen py-2 mx-auto">
    
 
-        <main className="flex flex-col items-center justify-center flex-1 w-full min-h-screen px-4 py-2 mx-auto mt-12 text-center sm:mt-20">
           <h1 className="max-w-xl text-2xl font-bold sm:text-4xl">
             Ask me anything about Motor!
           </h1>
@@ -188,7 +187,6 @@ const AskPage: NextPage<Props> = ({ children, meta: pageMeta }: Props) => {
           </ResizablePanel>
 
           </div>
-        </main>
       </div>
     </>
   );

@@ -24,12 +24,13 @@ const Embeddings: NextPage = () => {
   };
 
   return (
+    <div className="flex flex-col justify-center min-h-screen antialiased text-center text-slate-50">
     <div className="flex flex-col items-center max-w-xl m-auto text-center">
       <h1 className="w-full my-5 text-2xl font-bold sm:text-4xl ">
         Generate embeddings
       </h1>
       <p className="mb-4">
-        Paste a list of URLs below to geneate embeddings using the OpenAI API, and add the embeddings to the Supabase embeddings table.
+        Paste a list of URLs below to geneate embeddings.
       </p>
       <form onSubmit={handleSubmit}>
         <textarea
@@ -47,6 +48,7 @@ const Embeddings: NextPage = () => {
         </button>
       </form>
       {loading && <div>Loading...</div>}
+      </div>
     </div>
   );
 };
