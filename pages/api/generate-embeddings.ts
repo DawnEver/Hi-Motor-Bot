@@ -16,10 +16,17 @@ export default async function handle(
     const documents = await getDocuments(urls);
 
     for (const { url, body } of documents) {
-      const input = body.replace(/\n/g, " ");
+      const str = body.replace(/\n/g, " ");
+
+      const chineseRegex = /[\u4e00-\u9fa5]/g;
+      const chineseText = str.match(chineseRegex)
+
+      const input = chineseText?.join("")
+
 
       console.log("\nDocument length: \n", body.length);
       console.log("\nURL: \n", url);
+      console.log("\nInput: \n", input);
 
       const apiKey = process.env.OPENAI_API_KEY;
       const apiURL = process.env.OPENAI_PROXY == "" ? "https://api.openai.com" : process.env.OPENAI_PROXY;

@@ -1,10 +1,11 @@
-# Domain-specific ChatGTP Starter App
+# Hi-Motor Bot
+forked from [https://github.com/gannonh/chatgpt-pgvector](https://github.com/gannonh/chatgpt-pgvector)
 
-ChatGPT is great for casual, general-purpose question-answers but falls short when domain-specific knowledge is needed. Further, it makes up answers to fill its knowledge gaps and never cites its sources, so it can't really be trusted. This starter app uses embeddings coupled with vector search to solve this, or more specifically, to show how OpenAI's chat completions API can be used to create conversational interfaces to domain-specific knowledge.
+ChatGPT is great for casual, general-purpose question-answers but falls short when domain-specific knowledge is needed. Further, it makes up answers to fill its knowledge gaps and never cites its sources, so it can't really be trusted. Hi-Motor Bot uses embeddings coupled with vector search to solve this, or more specifically, to show how OpenAI's chat completions API can be used to create conversational interfaces to domain-specific knowledge.
 
 Embeddings, as represented by vectors of floating-point numbers, measure the "relatedness" of text strings. These are super useful for ranking search results, clustering, classification, etc. Relatedness is measured by cosine similarity. If the cosine similarity between two vectors is close to 1, the vectors are highly similar and point in the same direction. In the case of text embeddings, a high cosine similarity between two embedding vectors indicates that the corresponding text strings are highly related.
 
-This starter app uses embeddings to generate a vector representation of a document, and then uses vector search to find the most similar documents to the query. The results of the vector search are then used to construct a prompt. The response is then streamed to the user. Check out the Supabase blog posts on [pgvector and OpenAI embeddings](https://supabase.com/blog/openai-embeddings-postgres-vector) for more background.
+Hi-Motor Bot uses embeddings to generate a vector representation of a document, and then uses vector search to find the most similar documents to the query. The results of the vector search are then used to construct a prompt. The response is then streamed to the user. Check out the Supabase blog posts on [pgvector and OpenAI embeddings](https://supabase.com/blog/openai-embeddings-postgres-vector) for more background.
 
 Technologies used:
 

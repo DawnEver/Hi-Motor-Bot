@@ -16,7 +16,7 @@ interface Props {
   meta?: PageMeta;
 }
 
-const DocsPage: NextPage<Props> = ({ children, meta: pageMeta }: Props) => {
+const AskPage: NextPage<Props> = ({ children, meta: pageMeta }: Props) => {
   const [loading, setLoading] = useState(false);
   const [userQ, setUserQ] = useState("");
   const [answer, setAanswer] = useState<String>("");
@@ -33,7 +33,7 @@ const DocsPage: NextPage<Props> = ({ children, meta: pageMeta }: Props) => {
 
     setAanswer("");
     setLoading(true);
-    const response = await fetch("/api/docs", {
+    const response = await fetch("/api/ask", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -72,8 +72,8 @@ const DocsPage: NextPage<Props> = ({ children, meta: pageMeta }: Props) => {
   return (
     <>
       <MetaTags
-        title="Webdev Answerbot"
-        description="Web Developer answer-bot trained on Supabase, Nextjs, React, TailwindCSS."
+        title="Hi-Motor Bot"
+        description="Answer-bot for motor learner."
         cardImage="/bot/docs-og.png"
         url=""
       />
@@ -82,7 +82,7 @@ const DocsPage: NextPage<Props> = ({ children, meta: pageMeta }: Props) => {
 
         <main className="flex flex-col items-center justify-center flex-1 w-full min-h-screen px-4 py-2 mx-auto mt-12 text-center sm:mt-20">
           <h1 className="max-w-xl text-2xl font-bold sm:text-4xl">
-            Ask me anything<sup>*</sup>  about web development!
+            Ask me anything about Motor!
           </h1>
           <div className="w-full max-w-xl">
             <textarea
@@ -90,7 +90,7 @@ const DocsPage: NextPage<Props> = ({ children, meta: pageMeta }: Props) => {
               onChange={(e) => setUserQ(e.target.value)}
               rows={4}
               className="w-full p-2 my-5 border rounded-md shadow-md bg-neutral border-neutral-focus "
-              placeholder={"e.g. What are edge functions?"}
+              placeholder={"e.g. 同步磁阻电机是什么?"}
             />
 
             {!loading && (
@@ -187,17 +187,6 @@ const DocsPage: NextPage<Props> = ({ children, meta: pageMeta }: Props) => {
             </AnimatePresence>
           </ResizablePanel>
 
-          <div className="max-w-xl text-xs">
-            <p><sup>*</sup>Actually, I'm currently only trained on the following documentation:</p>
-            <ul>
-              <li><a target="_blank" href="">https://beta.reactjs.org/</a></li>
-              <li><a target="_blank" href="">https://supabase.com/docs</a></li>
-              <li><a target="_blank" href="">https://tailwindcss.com/docs</a></li>
-              <li><a target="_blank" href="">https://nextjs.org/docs</a></li>
-              <li><a target="_blank" href="">https://beta.nextjs.org/docs</a></li>
-            </ul>
-            </div>
-
           </div>
         </main>
       </div>
@@ -205,4 +194,4 @@ const DocsPage: NextPage<Props> = ({ children, meta: pageMeta }: Props) => {
   );
 };
 
-export default DocsPage;
+export default AskPage;
