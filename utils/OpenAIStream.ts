@@ -3,6 +3,7 @@ import {
   ParsedEvent,
   ReconnectInterval,
 } from "eventsource-parser";
+import { HttpsProxyAgent } from 'https-proxy-agent';
 
 export interface OpenAIStreamPayload {
   model: string;
@@ -23,6 +24,7 @@ export async function OpenAIStream(payload: OpenAIStreamPayload) {
   let counter = 0;
 
   const apiURL = process.env.OPENAI_PROXY == "" ? "https://api.openai.com" : process.env.OPENAI_PROXY;
+  const proxyURL = process.env.HTTPS_PROXY;
 
   const res = await fetch(apiURL + "/v1/chat/completions", {
     headers: {
@@ -31,6 +33,9 @@ export async function OpenAIStream(payload: OpenAIStreamPayload) {
     },
     method: "POST",
     body: JSON.stringify(payload),
+    mode: "cors", // 允许跨域请求
+    redirect: "follow", // 自动重定向
+    referrerPolicy: "no-referrer", // 不发送 Referrer 信息
   });
 
   const stream = new ReadableStream({

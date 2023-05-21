@@ -6,4 +6,6 @@ WORKDIR /app
 
 RUN npm install --registry=https://registry.npm.taobao.org
 
-CMD ["npm", "run", "dev"]
+# CMD ["npm", "run", "dev"]
+CMD ["npm", "run", "build"]
+CMD ["npm", "run", "start"]
