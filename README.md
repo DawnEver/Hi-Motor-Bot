@@ -1,5 +1,4 @@
 # Hi-Motor Bot
-forked from [https://github.com/gannonh/chatgpt-pgvector](https://github.com/gannonh/chatgpt-pgvector)
 
 ChatGPT is great for casual, general-purpose question-answers but falls short when domain-specific knowledge is needed. Further, it makes up answers to fill its knowledge gaps and never cites its sources, so it can't really be trusted. Hi-Motor Bot uses embeddings coupled with vector search to solve this, or more specifically, to show how OpenAI's chat completions API can be used to create conversational interfaces to domain-specific knowledge.
 
@@ -117,3 +116,5 @@ npm run dev
 ```
 
 - Open http://localhost:5183 in your browser to view the app.
+
+forked from [https://github.com/gannonh/chatgpt-pgvector](https://github.com/gannonh/chatgpt-pgvector)
