@@ -43,9 +43,10 @@ const AskPage: NextPage<Props> = ({ children, meta: pageMeta }: Props) => {
       })
     });
     console.log("Edge function returned.");
-
+    console.log(response);
     if (!response.ok) {
-      throw new Error(response.statusText);
+      console.log(response)
+      // throw new Error(response.statusText);
     }
 
     // This data is a ReadableStream

@@ -45,11 +45,11 @@ export default async function handle(
           })
         }
       );
-      // console.log("\nembeddingResponse: \n", embeddingResponse);
+      console.log("\nembeddingResponse: \n", embeddingResponse);
       const embeddingData = await embeddingResponse.json();
 
       const [{ embedding }] = embeddingData.data;
-      // console.log("embedding:" + embedding);
+      console.log("embedding:" + embedding);
 
       // In production we should handle possible errors
       try {
