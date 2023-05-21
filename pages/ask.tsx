@@ -43,7 +43,6 @@ const AskPage: NextPage<Props> = ({ children, meta: pageMeta }: Props) => {
       })
     });
     console.log("Edge function returned.");
-    console.log(response);
     if (!response.ok) {
       console.log(response)
       // throw new Error(response.statusText);

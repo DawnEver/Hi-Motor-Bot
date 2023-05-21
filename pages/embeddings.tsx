@@ -20,7 +20,9 @@ const Embeddings: NextPage = () => {
 
     if (!response.ok) {
       // Handle error
+      // console.log(response);
     }
+    
   };
 
   return (
